@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "470324956835",
+    "project_id": "clase-e51e2",
+    "storage_bucket": "clase-e51e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470324956835:android:245acf4bdb6e7ca5eaf916",
+        "android_client_info": {
+          "package_name": "com.example.diegotest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK1LFo2m75DJzYOrtgcr81das7s7VQ2yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
