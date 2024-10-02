@@ -105,6 +105,18 @@
         android:id="@+id/readButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="changeToShow"
+        android:text="Show"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toStartOf="@+id/textGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/textGuidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/readButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="readFromSQL_DB"
         android:text="Read"
         app:layout_constraintBottom_toBottomOf="parent"

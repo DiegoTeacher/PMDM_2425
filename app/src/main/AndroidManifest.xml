@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DiegoTest"
         tools:targetApi="31">
         <activity
+            android:name=".ShowDatabase"
+            android:exported="false" />
+        <activity
             android:name=".imageActivity"
             android:exported="false" />
         <activity

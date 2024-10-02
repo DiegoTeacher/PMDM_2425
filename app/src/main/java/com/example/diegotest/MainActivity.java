@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "ERROR AL INSERTAR", Toast.LENGTH_LONG).show();
     }
 
+    public void changeToShow(View view) {
+        startActivity(new Intent(MainActivity.this, ShowDatabase.class));
+    }
+
     public void readFromSQL_DB(View view) {
         SQLiteDatabase db = dbAux.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM personas WHERE id = 1", null);
