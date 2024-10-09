@@ -12,10 +12,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     DataBaseAux dbAux;
@@ -63,6 +71,35 @@ public class MainActivity extends AppCompatActivity {
         else
             Toast.makeText(this, "ERROR AL INSERTAR", Toast.LENGTH_LONG).show();
     }
+
+    public void addToFirebase_DB(View view) {
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        Map<String, Object> values = new HashMap<>();
+        TextView username = findViewById(R.id.nameTextView);
+        TextView email = findViewById(R.id.mailTextView);
+        TextView password = findViewById(R.id.passTextView);
+
+        values.put("name", username.getText().toString());
+        values.put("email", email.getText().toString());
+        values.put("password", password.getText().toString());
+
+        database.collection("users").document(username.getText().toString())
+                .set(values)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(MainActivity.this, "TODO OK", Toast.LENGTH_LONG).show();
+                        Log.d("EXITO", "TODO OK");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, "NADA OK", Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
+
 
     public void changeToShow(View view) {
         startActivity(new Intent(MainActivity.this, ShowDatabase.class));

@@ -1,5 +1,4 @@
 plugins {
-    alias(libs.plugins.androidApplication)
     id("com.android.application")
     id("com.google.gms.google-services")
 }
@@ -46,6 +45,7 @@ dependencies {
     // TODO: Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-firestore-ktx:25.1.0")
 
 
     // Add the dependencies for any other desired Firebase products
