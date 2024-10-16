@@ -26,9 +26,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hola"
+        style="@style/BordesRedonditos2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shapes"
+        android:text="hola hola hola"
         app:layout_constraintEnd_toStartOf="@+id/textGuidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/textGuidelineStart"
         app:layout_constraintTop_toTopOf="@+id/textGLTop" />
@@ -67,11 +69,13 @@
 
     <EditText
         android:id="@+id/nameTextView"
+        style="@style/BordesRedonditos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
         android:hint="Escribe tu nombre"
         android:inputType="text"
+        android:text="hola"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/textGuidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/textGuidelineStart"
@@ -119,6 +123,7 @@
         android:layout_height="wrap_content"
         android:onClick="readFromSQL_DB"
         android:text="Read"
+        style="@style/BordesRedonditos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textGuidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/textGuidelineStart"
